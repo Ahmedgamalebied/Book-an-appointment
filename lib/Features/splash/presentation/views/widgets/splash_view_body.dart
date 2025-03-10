@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/constants.dart';
 import 'package:flutter_application/core/utils/assetsPath.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -11,6 +12,10 @@ class SplashViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsPath.logoPath),
+        const Text(
+          '$splashBanner',
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
