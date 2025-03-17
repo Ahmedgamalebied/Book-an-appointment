@@ -16,6 +16,7 @@ class HomeViewBody extends StatelessWidget {
         FeaturedBooksListview(),
         SizedBox(height: 45),
         Text("Best Seller", style: Styles.textStyle18),
+        BestSellerViewItem(),
       ],
     );
   }
@@ -44,9 +45,21 @@ class BestSellerViewItem extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(width: 30),
           Column(
-            
-            children: [Text("Harry Potter", style: Styles.textStyle20,)]),
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  softWrap: true,
+                  "Harry Potter Chapter one , two and three",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.textStyle20,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
