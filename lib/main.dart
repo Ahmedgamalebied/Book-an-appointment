@@ -24,3 +24,19 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class HI extends StatelessWidget {
+  const HI({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kprimaryColor,
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+      ),
+      home: const SplashView(),
+    );
+  }
+}
