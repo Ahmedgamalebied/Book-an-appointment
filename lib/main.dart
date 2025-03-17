@@ -40,3 +40,19 @@ class HI extends StatelessWidget {
     );
   }
 }
+
+class Kell extends StatelessWidget {
+  const Kell({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kprimaryColor,
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+      ),
+      home: const SplashView(),
+    );
+  }
+}
