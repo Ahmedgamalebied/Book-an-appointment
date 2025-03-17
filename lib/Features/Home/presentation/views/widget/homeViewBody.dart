@@ -14,13 +14,8 @@ class HomeViewBody extends StatelessWidget {
       children: [
         CustomAppBar(),
         FeaturedBooksListview(),
-        SizedBox(
-          height: 45,
-        ),
-        Text(
-          "Best Seller",
-          style: Styles.textStyle18,
-        )
+        SizedBox(height: 45),
+        Text("Best Seller", style: Styles.textStyle18),
       ],
     );
   }
@@ -40,13 +35,18 @@ class BestSellerViewItem extends StatelessWidget {
             child: Container(
               height: 300,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.white,
-                  image: const DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage(AssetsPath.testingphoto))),
+                borderRadius: BorderRadius.circular(16),
+                color: Colors.white,
+                image: const DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage(AssetsPath.testingphoto),
+                ),
+              ),
             ),
-          )
+          ),
+          Column(
+            
+            children: [Text("Harry Potter", style: Styles.textStyle20,)]),
         ],
       ),
     );
