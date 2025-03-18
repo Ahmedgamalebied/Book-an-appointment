@@ -8,9 +8,10 @@ class ListBestSellerViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: SizedBox(
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20),
         child: ListView.builder(
-          scrollDirection: Axis.vertical,
+          physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, item) {
             return BestSellerViewItem();
           },
